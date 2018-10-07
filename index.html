@@ -1,81 +1,36 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<style type="text/css">
-		*{
-			box-sizing: border-box;
-			padding: 0;
-			margin: 0;
-			font-family: arial;
-		}
-		div{
-			position: relative;
-		}
-		button {
-			border: 1px #999 solid;
-			border-radius: 5px;
-			background: white;
-			padding: 15px;
-			cursor: pointer;
-		}
-		#score {
-			width: 1046px;
-			float: left;
-			text-align: center;
-		}
-		.p1 {
-			float: left;
-			width: 160px;
-		}
-		.p2 {
-			float: right;
-			width: 160px;
-			cursor: pointer;
-		}
-		#rocki, #paperi, #scissorsi {
-			float: left;
-			width: 100%;
-			left: -50px;
-			transition: left .3s;
-			cursor: pointer;
-		}
-		#rock, #paper, #scissors {
-			float: right;
-			right: -50px;
-			transition: right .3s;
-			cursor: pointer;
-		}
-		#rocki:hover, #paperi:hover, #scissorsi:hover {
-			left: 0;
-		}
-		#rock:hover, #paper:hover, #scissors:hover {
-			right: -5px;
-		}
-	</style>
-	<title></title>
+	<title>RPS</title>
+	<link rel="stylesheet" href="assets/style.css">
 </head>
+
 <body>
-	<div class="p1">
-		<div id="rocki"><img src="assets/images/rocki.jpg"></div>
-		<div id="paperi"><img src="assets/images/paperi.jpg"></div>
-		<div id="scissorsi"><img src="assets/images/scissorsi.jpg"></div>
+	<div class="container">
+		<div class="p1">
+			<div id="rocki"><img src="assets/images/rocki.jpg"></div>
+			<div id="paperi"><img src="assets/images/paperi.jpg"></div>
+			<div id="scissorsi"><img src="assets/images/scissorsi.jpg"></div>
+		</div>
+		<div id="score">
+			<h1>Score:</h1>
+			<p>Player 1: </p>
+			<p id="p1">0</p>
+			<p>Player 2: </p>
+			<p id="p2">0</p>
+			<button onclick="test();">Click when both players chose.</button>
+			<h2 id="win"></h2>
+		</div>
+		<div class="p2">
+			<div id="rock"><img src="assets/images/rock.jpg"></div>
+			<div id="paper"><img src="assets/images/paper.jpg"></div>
+			<div id="scissors"><img src="assets/images/scissors.jpg"></div>
+		</div>
 	</div>
-	<div id="score">
-		<h1>Score:</h1>
-		<p>Player 1: </p>
-		<p id="p1">0</p>
-		<p>Player 2: </p>
-		<p id="p2">0</p>
-		<button onclick="test();">Click when both players chose.</button>
-		<h2 id ="win"></h2>
-	</div>
-	<div class="p2">
-		<div id="rock"><img src="assets/images/rock.jpg"></div>
-		<div id="paper"><img src="assets/images/paper.jpg"></div>
-		<div id="scissors"><img src="assets/images/scissors.jpg"></div>
-	</div>
-	
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script src="assets/scripts/script.js"></script>
 </body>
+
 </html>

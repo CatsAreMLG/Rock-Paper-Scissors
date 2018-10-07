@@ -1,0 +1,100 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: arial;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+button {
+    border: 1px #999 solid;
+    border-radius: 5px;
+    background: white;
+    padding: 15px;
+    cursor: pointer;
+}
+
+#score {
+    width: 80%;
+    text-align: center;
+}
+
+.p1,
+.p2 {
+    position: relative;
+    width: auto;
+}
+
+.p1.test:after {
+    position: absolute;
+    text-align: center;
+    content: '✔';
+    background: rgb(85, 214, 96);
+    top: 14%;
+    right: -2rem;
+    padding: .5rem .8rem;
+    /* display: none; */
+}
+
+.p2.test:after {
+    position: absolute;
+    text-align: center;
+    content: '✔';
+    background: rgb(85, 214, 96);
+    top: 14%;
+    left: -2rem;
+    padding: .5rem .8rem;
+    /* display: none; */
+}
+
+.p2 div {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.p1 div {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+#rocki,
+#paperi,
+#scissorsi {
+    width: 100%;
+    position: relative;
+    left: 0;
+    transition: left .3s;
+    cursor: pointer;
+}
+
+#rock,
+#paper,
+#scissors {
+    width: 100%;
+    position: relative;
+    right: 0;
+    transition: right .3s;
+    cursor: pointer;
+}
+
+#rocki:hover,
+#paperi:hover,
+#scissorsi:hover {
+    left: -30px;
+}
+
+#rock:hover,
+#paper:hover,
+#scissors:hover {
+    right: -30px;
+}
